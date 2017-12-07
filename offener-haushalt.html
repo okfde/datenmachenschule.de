@@ -3,15 +3,11 @@ layout: default
 title: Offener Haushalt
 permalink: /offener-haushalt/
 ---
-<!-- hero -->
-<div class="row">
-    <section class="hero col-xs-24">
-        <div class="quote">Offener Haushalt</div>
-        <div class="dots">
-            <!-- dots get appeded by JS -->
-        </div>
-    </section>
-</div>
+
+<!-- include hero  -->
+{% assign quotes = "Offener Haushalt" | split: '|' %}
+{% include partials/hero.liquid  %}
+
 <div class="row">
     <section class="section bg-grey col-xs-24">
         <div class="text-wrap text-block bg-white">

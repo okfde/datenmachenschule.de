@@ -1,17 +1,9 @@
 ---
 layout: default
 ---
-<!-- hero -->
-<div class="row">
-    <section class="hero col-xs-24">
-        <div class="quote">Wofür werden unsere Steuergelder ausgegeben, und warum?</div>
-        <div class="quote">Wieso wird in bestimmten Teilen meiner Stadt so viel AfD gewählt? </div>
-        <div class="quote">Wie hoch ist die Luftverschmutzung bei uns (wirklich)?</div>
-        <div class="dots">
-            <!-- dots get appeded by JS -->
-        </div>
-    </section>
-</div>
+<!-- include hero  -->
+{% assign quotes = "Wofür werden unsere Steuergelder ausgegeben, und warum?|Wieso wird in bestimmten Teilen meiner Stadt so viel AfD gewählt?|Wie hoch ist die Luftverschmutzung bei uns (wirklich)?" | split: '|' %}
+{% include partials/hero.liquid  %}
 <!-- intro -->
 <div class="row">
     <section class="section bg-grey col-xs-24">

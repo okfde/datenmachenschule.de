@@ -3,15 +3,11 @@ layout: default
 title: Das Projekt
 permalink: /about/
 ---
-<!-- hero -->
-<div class="row">
-    <section class="hero col-xs-24">
-        <div class="quote">Über das Projekt</div>
-        <div class="dots">
-            <!-- dots get appeded by JS -->
-        </div>
-    </section>
-</div>
+
+<!-- include hero  -->
+{% assign quotes = "Über das Projekt" | split: '|' %}
+{% include partials/hero.liquid  %}
+
 <!-- intro -->
 <div class="row">
     <section class="section bg-grey col-xs-24">

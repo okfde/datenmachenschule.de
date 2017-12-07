@@ -3,15 +3,11 @@ layout: default
 title: Was ist Open Data?
 permalink: /opendata/
 ---
-<!-- hero -->
-<div class="row">
-    <section class="hero col-xs-24">
-        <div class="quote">Offene Daten im Unterricht</div>
-        <div class="dots">
-            <!-- dots get appeded by JS -->
-        </div>
-    </section>
-</div>
+
+<!-- include hero  -->
+{% assign quotes = "Offene Daten im Unterricht" | split: '|' %}
+{% include partials/hero.liquid  %}
+
 <!--
 <div class="row">
     <section class="section bg-red col-xs-24 white centered">

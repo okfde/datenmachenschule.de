@@ -3,15 +3,10 @@ layout: default
 title: Tools, Formate, Skills
 permalink: /tools-formate-skills/
 ---
-<!-- hero -->
-<div class="row">
-    <section class="hero col-xs-24">
-        <div class="quote">Tools, Formate, Skills</div>
-        <div class="dots">
-            <!-- dots get appeded by JS -->
-        </div>
-    </section>
-</div>
+<!-- include hero  -->
+{% assign quotes = "Tools, Formate, Skills" | split: '|' %}
+{% include partials/hero.liquid  %}
+
 <div class="row">
     <section class="section bg-grey col-xs-24">
         <div class="text-wrap text-block bg-white">
