@@ -208,7 +208,7 @@ WRAPPER STYLES
     font-size: 1.25rem;
   }
   blockquote{
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     font-family: $font-iosevka-regular;
     color: $secondary-color;
     margin: 20px;
@@ -216,7 +216,7 @@ WRAPPER STYLES
 
   p {
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 0;
 
     &:last-of-type{
@@ -278,16 +278,16 @@ WRAPPER STYLES
       li{
         &:before {
           position: absolute;
-          left:-13px;
+          left:-7px;
           top:0;
           color: white;
           content: counter(counter);
           counter-increment: counter;
-          font-size: 0.8em;
+          font-size: 1.1em;
           text-align: center;
-          width: 40px;
-          height: 40px;
-          border-radius: 20px;
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
           background-color: $third-color;
           z-index: 2;
         }
@@ -299,7 +299,7 @@ WRAPPER STYLES
           z-index: 1;
           left: 6.5px;
           position: absolute;
-          top:40px;
+          top:30px;
         }
 
         padding-bottom: 40px;
@@ -610,8 +610,6 @@ PAGE & SECTIONS
 }
 .text-wrap{
 
-  word-break: break-word;
-
   a{
     background-color: $link-background;
     padding: 0 5px;
@@ -639,7 +637,7 @@ CONTENT
 }
 
 .content-image-wrap{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   img{
     width: 100%;
@@ -647,7 +645,7 @@ CONTENT
   }
 
   .caption{
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
 }

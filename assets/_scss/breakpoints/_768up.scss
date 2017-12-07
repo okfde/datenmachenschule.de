@@ -30,6 +30,35 @@ PAGE & SECTIONS
     font-size: 2.75rem;
     margin: 50px;
   }
+  .page-wrap{
+    p{
+      margin-bottom: 50px;
+    }
+  }
+
+  ol{
+
+    &.timeline{
+
+      li{
+        &:before {
+          left:-13px;
+          top:0;
+          font-size: 0.8em;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+        }
+        &:after {
+          top:40px;
+        }
+
+      }
+    }
+
+  }
+
 }
 
 .text-block{
@@ -40,6 +69,8 @@ PAGE & SECTIONS
 .text-wrap, .accordion{
   width: 85%;
 }
+
+
 
 /*********************
 ACCORDION
@@ -69,6 +100,17 @@ QUOTES
   font-size: 4.5em;
   -moz-text-stroke-width: 2px;
   -webkit-text-stroke-width: 2px;
+}
+
+/*********************
+CONTENT
+*********************/
+
+.content-image-wrap{
+  margin-bottom: 50px;
+  .caption{
+    font-size: 1.25em;
+  }
 }
 
 /*********************
