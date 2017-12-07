@@ -75,7 +75,13 @@
             e.preventDefault();
         });
 
-        $(".text-block").fitVids();
+
+        $body.fitVids();
+
+        $('.fade-in').viewportChecker({
+            classToAdd: 'animated fadeInUp',
+            offset: 100
+        });
 
         ref.addEventHandlers();
         ref.resize();
