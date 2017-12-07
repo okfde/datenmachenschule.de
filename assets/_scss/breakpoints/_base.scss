@@ -170,7 +170,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.3em;
 }
 
@@ -232,6 +232,13 @@ WRAPPER STYLES
 
   ol,ul{
     margin: 50px 0;
+
+    li{
+      ul,ol{
+        margin: 25px 0;
+      }
+    }
+
   }
 
   ul{
@@ -241,7 +248,7 @@ WRAPPER STYLES
     li{
 
       position: relative;
-      padding-left: 40px;
+      padding-left: 30px;
       margin-bottom: 10px;
 
       &:before {
@@ -262,7 +269,7 @@ WRAPPER STYLES
 
     li{
       position: relative;
-      padding-left: 40px;
+      padding-left: 30px;
       margin-bottom: 10px;
 
       &:before {
@@ -660,7 +667,7 @@ CONTENT
   margin: 50px 0;
   width: 100%;
 }
-
+h1
 .footnotes{
   border-top: 2px solid $secondary-color;
   margin-top: 25px;
@@ -723,7 +730,7 @@ ACCORDION
     cursor: pointer;
 
     .accordion-headline{
-      font-size: 1.5em;
+      font-size: 1.25em;
       pointer-events: none;
       padding: 0 60px 0 25px;
       margin: 0;

@@ -49,6 +49,12 @@ PAGE & SECTIONS
     }
   }
 
+  ol, ul{
+    li{
+      padding-left: 40px;
+    }
+  }
+
   ol{
 
     &.timeline{
