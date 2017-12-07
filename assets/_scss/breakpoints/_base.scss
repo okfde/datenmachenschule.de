@@ -54,6 +54,10 @@ LAYOUT & GRID STYLES
   position: relative;
   display: table;
 
+  &.first{
+    padding-top: 15px;
+  }
+
   &.fullwidth{
     width:100%
   }
@@ -171,13 +175,13 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   line-height: 1.3em;
   margin-bottom: 0.375em;
 }
 
 h3, .h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.3;
 }
 
@@ -218,6 +222,7 @@ WRAPPER STYLES
 
     margin-bottom: 30px;
     margin-top: 0;
+    line-height: 1.75em;
 
     &:last-of-type{
       margin-bottom: 0;

@@ -1,4 +1,17 @@
 /*********************
+LAYOUT & GRID STYLES
+*********************/
+
+/* see partials/_bootstrap-grid24.scss */
+
+.section {
+
+  &.first {
+    padding-top: 100px;
+  }
+}
+
+/*********************
 QUOTES
 *********************/
 
