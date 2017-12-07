@@ -44,3 +44,9 @@ exclude:
 sass:
   sass_dir:          assets/_scss
   #style:            :compressed
+
+# Collections
+collections:
+  tools:
+    output: true
+    permalink: /:collection/:name

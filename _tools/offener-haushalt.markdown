@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Offener Haushalt
-permalink: /offener-haushalt/
+permalink: /tools/offener-haushalt/
 ---
 
 <!-- include hero  -->

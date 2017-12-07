@@ -6,7 +6,7 @@
                 {% assign base_dir = page.url | split:'/'  %}
                 {% assign base_dir = base_dir  %}
                 <li {% if base_dir[1] == 'opendata' %} class="current" {% endif %} ><a href="/opendata">Offene Daten im Unterricht</a></li>
-                <li {% if base_dir[1] == 'offener-haushalt' %} class="current" {% endif %}><a href="/offener-haushalt">Offener Haushalt</a></li>
+                <li {% if base_dir[2] == 'offener-haushalt' %} class="current" {% endif %}><a href="/tools/offener-haushalt">Offener Haushalt</a></li>
                 <!--
                 <li class="has-submenu">
                     <a href="#">Tools</a>
