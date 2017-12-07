@@ -253,7 +253,7 @@ WRAPPER STYLES
 
   ol{
 
-    counter-reset: my-badass-counter;
+    counter-reset: counter;
 
     li{
       position: relative;
@@ -264,11 +264,56 @@ WRAPPER STYLES
         position: absolute;
         left:0;
         color: $third-color;
-        content: counter(my-badass-counter);
-        counter-increment: my-badass-counter;
+        content: counter(counter);
+        counter-increment: counter;
         font-size: 1.5em;
       }
 
+    }
+
+    &.timeline{
+
+      counter-reset: counter;
+
+      li{
+        &:before {
+          position: absolute;
+          left:-13px;
+          top:0;
+          color: white;
+          content: counter(counter);
+          counter-increment: counter;
+          font-size: 0.8em;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: $third-color;
+          z-index: 2;
+        }
+        &:after {
+          content: '';
+          width: 2px;
+          height: 100%;
+          background-color: $third-color;
+          z-index: 1;
+          left: 6.5px;
+          position: absolute;
+          top:40px;
+        }
+
+        padding-bottom: 40px;
+
+        &:last-of-type{
+
+          padding-bottom: 0;
+
+          &:after{
+            display: none;
+          }
+        }
+
+      }
     }
 
   }
@@ -525,7 +570,7 @@ QUOTES
     display: inline-block;
   }
 
-  line-height: 1.25;
+  line-height: 1.4em;
 
   width: 85%;
   text-align: center;
@@ -537,8 +582,8 @@ QUOTES
   -webkit-text-fill-color: white;
   -moz-text-stroke-color: $secondary-color;
   -webkit-text-stroke-color: $secondary-color;
-  -moz-text-stroke-width: 1.5px;
-  -webkit-text-stroke-width: 1.5px;
+  -moz-text-stroke-width: 1.25px;
+  -webkit-text-stroke-width: 1.25px;
 
   &.visible{
     display: block;
@@ -582,7 +627,7 @@ PAGE & SECTIONS
 }
 
 .text-wrap, .accordion{
-  width: 90%;
+  width: 98%;
 }
 
 /*********************
@@ -597,11 +642,26 @@ CONTENT
     height: auto;
   }
 
+  .caption{
+    font-size: 1.25em;
+  }
+
 }
 
 .video-wrap{
   margin: 50px 0;
   width: 100%;
+}
+
+.footnotes{
+  border-top: 2px solid $secondary-color;
+  padding-top: 20px;
+
+  p{
+    font-size: 1.25em !important;
+  }
+
+
 }
 
 /*********************
@@ -711,6 +771,15 @@ FOOTER STYLES
             background-color: $secondary-color;
           }
         }
+
+        &.logo{
+          a{
+            &:hover{
+              background-color: transparent;
+            }
+          }
+        }
+
       }
 
     }
