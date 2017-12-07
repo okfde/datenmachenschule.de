@@ -12,7 +12,7 @@
     };
 
     var ref, $, $header, $body, $mainNav, $navToggle, $accordions, $subMenuToggle, $submenuToggles,
-        quotesController, openAccordionIndex;
+        quotesController, openAccordionIndex, closed_index, jump_height, clicked_index, $content_old;
     function Controller(jQuery){
 
         $ = jQuery;
@@ -50,6 +50,23 @@
         quotesController = new HeroQuotes(this);
         quotesController.init();
 
+        $body.fitVids();
+
+        $('.fade-in').viewportChecker({
+            classToAdd: 'animated fadeInUp',
+            offset: 100
+        });
+
+        ref.initAccordions();
+        ref.addEventHandlers();
+        ref.resize();
+
+    };
+
+    /*********************
+     init accordions
+     *********************/
+    Controller.prototype.initAccordions = function(){
         //accordions
         $accordions = $('.accordion');
         if($accordions.length > 0){
@@ -60,11 +77,40 @@
                 var $accHeader = $(this).find('.accordion-header');
                 $accHeader.click(function(){
 
-                    var $acc = $(this).closest('.accordion');
-                    var index = $acc.attr('data-index');
+                    closed_index = null;
 
+                    var $acc = $(this).closest('.accordion');
+                    var $content = $acc.find('.accordion-content');
+                    clicked_index = $acc.attr('data-index');
+
+                    if(!$acc.hasClass('open')){
+
+                        //close open ones first
+                        $accordions.each(function(){
+                            if($(this).hasClass('open')){
+                                //hard close this
+                                $content_old = $(this).find('.accordion-content');
+                                closed_index = $(this).attr('data-index');
+                                TweenLite.set($content_old, {height:0, ease: Expo.easeIn});
+                                $(this).removeClass("open");
+                            }
+                        });
+
+                        if(closed_index){
+                            if(parseInt(closed_index) < parseInt(clicked_index)){
+                                TweenLite.to(window, 0.5, {scrollTo:{y:'#'+$acc.attr('id'), offsetY:$header.height()*2} });
+                            }
+                        }
+
+                        //now open it
+                        TweenLite.set($content, {height:"auto"});
+                        TweenLite.from($content, 0.5, {height:0, ease: Expo.easeIn});
+
+                    } else {
+                        //close
+                        TweenLite.to($content, 0.5, {height:0, ease: Expo.easeOut});
+                    }
                     $acc.toggleClass('open');
-                    //ref.closeAccordions(index);
                 });
             });
         }
@@ -74,18 +120,13 @@
             openAccordionIndex = $(this).attr('data-index');
             e.preventDefault();
         });
+    };
 
-
-        $body.fitVids();
-
-        $('.fade-in').viewportChecker({
-            classToAdd: 'animated fadeInUp',
-            offset: 100
-        });
-
-        ref.addEventHandlers();
-        ref.resize();
-
+    /*********************
+     open accordion with data-index
+     *********************/
+    Controller.prototype.openAccordion = function(index){
+        $(".accordion[data-index='" + index +"']").addClass('open');
     };
 
     /*********************
@@ -96,13 +137,6 @@
             var i = $(this).attr('data-index')
             if(i != index) $(this).removeClass('open')
         });
-    };
-
-    /*********************
-    open accordion with data-index
-    *********************/
-    Controller.prototype.openAccordion = function(index){
-        $(".accordion[data-index='" + index +"']").addClass('open');
     };
 
     /*********************

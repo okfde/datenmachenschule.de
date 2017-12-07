@@ -52,7 +52,7 @@ LAYOUT & GRID STYLES
 .section{
 
   position: relative;
-  display: table;
+  display: block;
 
   &.first{
     padding-top: 15px;
@@ -619,6 +619,7 @@ PAGE & SECTIONS
     background-color: $link-background;
     padding: 0 5px;
     @include transition(all .2s ease-in);
+    word-wrap: break-word;
 
     &:hover{
       background-color: transparent;
@@ -662,7 +663,8 @@ CONTENT
 
 .footnotes{
   border-top: 2px solid $secondary-color;
-  padding-top: 20px;
+  margin-top: 25px;
+  padding: 25px;
 
   p{
     font-size: 1.25em !important;
