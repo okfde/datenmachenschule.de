@@ -1,0 +1,718 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  font-family: $font-inter-regular;
+  font-size: 100%;
+  line-height: 1.5;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0px;
+
+  overflow: hidden;
+
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+/* see partials/_bootstrap-grid24.scss */
+
+.section{
+
+  position: relative;
+  display: table;
+
+  &.fullwidth{
+    width:100%
+  }
+  &.fullheight{
+    height: 100vh;
+  }
+
+  &.fullheight.fit-to-mobile{
+    min-height: 100%;
+    margin-bottom: 50px;
+  }
+
+  &.section-offener-haushalt, &.section-wahlergebnisportal{
+    margin-bottom: 25px;
+  }
+
+  &.section-offener-haushalt{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_offenerhaushalt HF.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.section-wahlergebnisportal{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_wahlergebnisportal HF.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.section-energieverbrauchsdaten{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_energieverbrauchsdaten HF.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+
+}
+
+/*********************
+read more
+*********************/
+
+.tool-read-more{
+  position: absolute;
+  text-align: center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+
+  .headline-read-more{
+    font-family: $font-iosevka-regular;
+    font-size: 3em;
+    display: inline-block;
+    width: 80%;
+
+    span.large{
+      display: none;
+    }
+  }
+
+  .btn-read-more{
+    background-color: $primary-color;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color:white;
+    display: inline-block;
+    font-size: 1.25em;
+  }
+
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+
+  /* on hover */
+  &:hover, &:focus {
+    color: $link-hover;
+  }
+
+  /* on click */
+  &:active {
+    color: $link-hover;
+  }
+
+  /* mobile tap color */
+  &:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color : transparent;
+  }
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  font-size: 3rem;
+  line-height: 1.3em;
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+  line-height: 1.3em;
+  margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5 {
+  font-size: 0.846rem;
+  line-height: 2.09em;
+  letter-spacing: 2px;
+}
+
+
+/*********************
+WRAPPER STYLES
+*********************/
+
+.page-wrap{
+  background-color: transparent;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+
+  min-height: 100%;
+
+  a, p, li {
+    font-size: 1.25rem;
+  }
+  blockquote{
+    font-size: 2.5rem;
+    font-family: $font-iosevka-regular;
+    color: $secondary-color;
+    margin: 20px;
+  }
+
+  p {
+
+    margin-bottom: 50px;
+    margin-top: 0;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+
+  }
+
+  ol,ul{
+    margin: 50px 0;
+  }
+
+  ul{
+
+    list-style-type: none;
+
+    li{
+
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 10px;
+
+      &:before {
+        position: absolute;
+        @include sprite(arrow-right);
+        content: '';
+        float: left;
+        top:8px;
+        left:0;
+      }
+
+    }
+  }
+
+  ol{
+
+    counter-reset: my-badass-counter;
+
+    li{
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 10px;
+
+      &:before {
+        position: absolute;
+        left:0;
+        color: $third-color;
+        content: counter(my-badass-counter);
+        counter-increment: my-badass-counter;
+        font-size: 1.5em;
+      }
+
+    }
+
+  }
+
+  .opendata-list{
+    padding: 50px 0;
+    list-style-type: circle;
+
+    li{
+
+      padding: 0;
+
+      &:before{
+        display: none;
+      }
+
+      a{
+        color: white;
+
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header{
+
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 52px;
+  z-index: 10;
+
+  @include transition(transform .25s ease);
+
+  &.fixed{
+    position: fixed;
+  }
+
+  &.gone{
+    transform: translateY(-100%);
+  }
+
+  .header-inner{
+
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+
+    .logo{
+
+      font-size: 1.55em;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 15px;
+
+        .datenmachen{
+          font-family: $font-inter-medium;
+          color: $primary-color;
+        }
+        .schule{
+          font-family: $font-iosevka-regular;
+          color: $secondary-color;
+          font-weight: bold;
+        }
+    }
+
+  }
+
+
+
+}
+
+/*********************
+MAIN NAV
+*********************/
+
+ul.main-nav{
+
+  @include transition(max-height .25s ease-in);
+  overflow: hidden;
+  max-height: 0;
+
+  &.open{
+    max-height: 300px;
+  }
+
+  .main-nav-inner{
+    padding: 30px 15px 15px 15px;
+  }
+
+  top: 37px;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid $grey;
+
+
+  font-family: $font-inter-medium;
+  font-size: 1.125em;
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+
+  li{
+    display: block;
+    margin-bottom: 10px;
+
+    a{
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+
+    &.has-submenu{
+
+      cursor: pointer;
+
+      a{
+        &:after {
+          @include sprite(arrow-down);
+          content: '';
+          float: right;
+          margin-left: 15px;
+        }
+
+        &:hover{
+          color: $primary-color;
+        }
+
+      }
+
+      &.open{
+        a{
+          &:after {
+            @include sprite(arrow-up);
+          }
+        }
+
+        .submenu{
+          display: block;
+        }
+
+      }
+    }
+
+    &.current{
+      a{
+        color: $secondary-color;
+      }
+    }
+
+  }
+
+  ul.submenu{
+    position: relative;
+    margin: 0;
+    padding: 20px 0 5px 0;
+    display: none;
+
+    &.open{
+      display: block;
+      li{
+        a{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+
+    li{
+      display: block;
+      float: none;
+      margin-bottom: 10px;
+      a{
+        &:after{
+          display: none;
+        }
+        &.current, &:hover{
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+}
+
+/*********************
+HERO
+*********************/
+
+.hero{
+  height: 98vh;
+
+  .dots{
+
+    display: inline-block;
+    bottom: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .dot{
+
+      cursor: pointer;
+
+      width: 18px;
+      height: 18px;
+      background-color: $grey;
+      border: 2px solid $grey;
+      border-radius: 9px;
+      float: left;
+      margin-right: 10px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+
+      &.current{
+        border: 2px solid $secondary-color;
+        background-color: white;
+      }
+
+    }
+  }
+
+}
+
+/*********************
+QUOTES
+*********************/
+
+.quote{
+
+  position: relative;
+  display: none;
+  font-size: 2em;
+  font-family: $font-iosevka-regular;
+
+  span{
+    position: relative;
+    display: inline-block;
+  }
+
+  line-height: 1.25;
+
+  width: 85%;
+  text-align: center;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+
+  -moz-text-fill-color: white;
+  -webkit-text-fill-color: white;
+  -moz-text-stroke-color: $secondary-color;
+  -webkit-text-stroke-color: $secondary-color;
+  -moz-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 1.5px;
+
+  &.visible{
+    display: block;
+  }
+}
+
+/*********************
+PAGE & SECTIONS
+*********************/
+
+.page-wrap{
+  width: 100%;
+  position: relative;
+}
+
+.text-block{
+  margin: 50px auto;
+  padding: 50px 25px;
+
+  h1,h2{
+    color: $secondary-color;
+  }
+
+}
+.text-wrap{
+
+  word-break: break-word;
+
+  a{
+    background-color: $link-background;
+    padding: 0 5px;
+    @include transition(all .2s ease-in);
+
+    &:hover{
+      background-color: transparent;
+      color: $secondary-color;
+    }
+
+  }
+
+}
+
+.text-wrap, .accordion{
+  width: 90%;
+}
+
+/*********************
+CONTENT
+*********************/
+
+.content-image-wrap{
+  margin-bottom: 50px;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.video-wrap{
+  margin: 50px 0;
+  width: 100%;
+}
+
+/*********************
+ACCORDION
+*********************/
+.accordions-wrap{
+  margin: 50px 0;
+}
+.accordion{
+  margin: 0 auto ;
+
+  &.open{
+    .accordion-content{
+      height: auto;
+    }
+    .accordion-header{
+
+      &:after {
+        @include sprite(accordion-opened);
+        content: '';
+        float: left;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  .accordion-header{
+    background-color: white;
+    text-align: left;
+    position: relative;
+
+    &:after {
+      @include sprite(accordion-closed);
+      content: '';
+      float: left;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    padding: 20px 0;
+    cursor: pointer;
+
+    .accordion-headline{
+      font-size: 1.5em;
+      pointer-events: none;
+      padding: 0 60px 0 25px;
+      margin: 0;
+    }
+
+  }
+
+  .accordion-content{
+    margin-bottom: 15px;
+    overflow:hidden;
+    height: 0;
+
+    .accordion-content-inner{
+      background-color: white;
+      padding: 25px;
+      margin-top: 25px;
+      width: 100%;
+    }
+
+  }
+
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer{
+    background-color: $primary-color;
+    min-height: $footer-height;
+
+    .footer-inner{
+
+      width: 100%;
+      padding: 50px 20px 0 20px;
+      display: inline-block;
+
+      .footer-content{
+
+        margin-bottom: 50px;
+
+        h3{
+          margin-bottom: 1em;
+        }
+
+        color: white;
+        a{
+          display: inline-block;
+          color: white;
+          padding: 0 5px;
+          @include transition(background-color .2s ease-in);
+
+          &:hover{
+            background-color: $secondary-color;
+          }
+        }
+      }
+
+    }
+
+}

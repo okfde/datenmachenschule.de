@@ -1,0 +1,76 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+******************************************************************/
+
+@font-face {
+  font-family: 'Iosevka Regular';
+  src: url($baseurl + '/assets/fonts/iosevka-regular.woff2') format('woff2'),
+  url($baseurl + '/assets/fonts/iosevka-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: url($baseurl + '/assets/fonts/Inter-UI-Regular.woff2') format('woff2'),
+  url($baseurl + '/assets/fonts/Inter-UI-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Medium';
+  src: url($baseurl + '/assets/fonts/Inter-UI-Medium.woff2') format('woff2'),
+  url($baseurl + '/assets/fonts/Inter-UI-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-iosevka-regular:    'Iosevka Regular', sans-serif;
+$font-inter-regular:    'Inter Regular', sans-serif;
+$font-inter-medium:    'Inter Medium', sans-serif;
+
+.iosevka-regular{
+  font-family: $font-iosevka-regular;
+}
+
+.inter-regular{
+  font-family: $font-inter-regular;
+}
+
+.inter-medium{
+  font-family: $font-inter-medium;
+}
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+}
+

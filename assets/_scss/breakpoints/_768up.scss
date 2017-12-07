@@ -1,0 +1,138 @@
+
+
+/*********************
+HERO
+*********************/
+
+.hero{
+  .dots{
+
+    margin-bottom: 50px;
+
+    .dot{
+      width: 25px;
+      height: 25px;
+      border-radius: 12.5px;
+    }
+  }
+}
+
+/*********************
+PAGE & SECTIONS
+*********************/
+
+.page-wrap{
+  a, p, li {
+    font-size: 1.75rem;
+    line-height: 1.75em;
+  }
+  blockquote{
+    font-size: 2.75rem;
+    margin: 50px;
+  }
+}
+
+.text-block{
+  margin: 70px auto;
+  padding: 50px;
+}
+
+.text-wrap, .accordion{
+  width: 85%;
+}
+
+/*********************
+ACCORDION
+*********************/
+
+.accordion{
+
+  .accordion-header{
+    padding: 12.5px 0;
+  }
+
+  .accordion-content{
+
+    margin-bottom: 25px;
+
+    .accordion-content-inner{
+      padding: 50px;
+    }
+  }
+}
+
+/*********************
+QUOTES
+*********************/
+
+.quote{
+  font-size: 4.5em;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+}
+
+/*********************
+read more
+*********************/
+
+.tool-read-more {
+  .headline-read-more {
+    font-size: 3.75em;
+    span.large{
+      display: block;
+    }
+    span.mobile{
+      display: none;
+    }
+  }
+}
+
+/*********************
+ACCORDION
+*********************/
+.accordion{
+
+  .accordion-header{
+    text-align: center;
+
+    .accordion-headline{
+      font-size: 2.125em;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+  }
+
+}
+
+/*********************
+read more
+*********************/
+
+.tool-read-more{
+
+
+  .headline-read-more {
+    font-size: 3.25em;
+  }
+
+  .btn-read-more{
+    padding: 20px 40px;
+    font-size: 1.5em;
+  }
+
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    padding: 50px;
+    .footer-content {
+      margin-bottom: 0;
+    }
+  }
+}

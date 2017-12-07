@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F4F4F4;}
+	.st1{fill:#FC6153;}
+	.st2{fill:#00E6C7;}
+	.st3{fill:#FFFFFF;}
+	.st4{display:none;}
+	.st5{display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<g id="Ebene_1">
+	<rect class="st0" width="1920" height="1080"/>
+	<polygon class="st1" points="1647.2,486.7 1259,949 1725.9,626.8 1920,563.6 1920,468 	"/>
+	<polygon class="st2" points="1670,576 1258.7,948.7 1059.6,803 415.8,1081.7 1920,1081.7 1920,552 	"/>
+	<polygon class="st2" points="1051.8,0 690.5,94.1 391,368.3 0,238.4 0,737.4 707.1,701.5 1063.7,360.3 1405.6,135.5 1919.5,43.9 
+		1919.5,0 	"/>
+	<polygon class="st1" points="815,0 691,94 1052,0 	"/>
+	<polygon class="st1" points="1424.1,84.9 1017.5,329.8 703.3,648.6 0,736.5 0,739.7 707.9,737 1054.5,385.2 1465.7,177.3 
+		1919.5,48 1919.5,32.9 	"/>
+	<polygon class="st1" points="0,238.2 391,368 0,151.2 	"/>
+	<g>
+		<path class="st3" d="M997.6,974.2c0,0-149.3,42.2-289.8,20.2c-122-19.1-194.6-102.8-303.9-102.8c-123.6,0-241.7,82.6-241.7,82.6
+			l160.3-427.7c0,0,121.2-53.7,228.6-53.7c82.5,0,220.5,83.4,314.1,83.4c101.8,0,288-29.7,288-29.7L997.6,974.2z"/>
+	</g>
+	<polygon class="st1" points="108.5,1081.7 125,1081.7 344.9,499.3 330.5,493.9 	"/>
+	<g>
+		<path class="st3" d="M1685.9,596.9c0,0-149.3,42.2-289.8,20.2c-122-19.1-194.6-102.8-303.9-102.8c-123.6,0-241.7,82.6-241.7,82.6
+			l160.3-427.7c0,0,121.2-53.7,228.6-53.7c82.5,0,220.5,83.4,314.1,83.4c101.8,0,288-29.7,288-29.7L1685.9,596.9z"/>
+	</g>
+	<polygon class="st1" points="656.2,1082 672.7,1082 1033.3,126.7 1018.9,121.2 	"/>
+</g>
+<g id="Ebene_2" class="st4">
+	<line class="st5" x1="960" y1="-243" x2="960" y2="1323"/>
+	<line class="st5" x1="1743" y1="540" x2="177" y2="540"/>
+</g>
+</svg>

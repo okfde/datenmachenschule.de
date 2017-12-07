@@ -1,0 +1,97 @@
+/*********************
+PAGE & SECTIONS
+*********************/
+
+.page-wrap{
+  a, p, li {
+    font-size: 1.75rem;
+  }
+  blockquote{
+    font-size: 2.75rem;
+  }
+}
+
+.text-block{
+
+  margin: 100px auto;
+  padding: 100px;
+}
+
+.text-wrap, .accordion{
+  width: 800px;
+}
+
+/*********************
+ACCORDION
+*********************/
+
+.accordion{
+  .accordion-content{
+
+    overflow: hidden;
+    height: 0;
+
+    .accordion-content-inner{
+      padding: 100px;
+    }
+  }
+}
+
+/*********************
+MAIN NAV
+*********************/
+
+ul.main-nav {
+  li {
+    margin-right: 60px;
+  }
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    padding: 100px;
+  }
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+/* see partials/_bootstrap-grid24.scss */
+
+.section{
+
+  &.section-offener-haushalt{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_offenerhaushalt.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.section-wahlergebnisportal{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_wahlergebnisportal.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.section-energieverbrauchsdaten{
+    background: url($baseurl + '/assets/img/static/tools/DatenmachenSchule_energieverbrauchsdaten.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+}
+
+/*********************
+read more
+*********************/
+
+.tool-read-more {
+  .headline-read-more {
+    font-size: 4.25em;
+    width: 100%;
+  }
+}

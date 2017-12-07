@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="header-inner">
+        <a class="logo" href="/"><span class="datenmachen inter-medium">Datenmachen</span><span class="schule iosevka-regular" >Schule</span></a>
+        <ul class="main-nav">
+            <div class="main-nav-inner">
+                {% assign base_dir = page.url | split:'/'  %}
+                {% assign base_dir = base_dir  %}
+                <li {% if base_dir[1] == 'opendata' %} class="current" {% endif %} ><a href="/opendata">Offene Daten im Unterricht</a></li>
+                <li {% if base_dir[1] == 'offener-haushalt' %} class="current" {% endif %}><a href="/offener-haushalt">Offener Haushalt</a></li>
+                <!--
+                <li class="has-submenu">
+                    <a href="#">Tools</a>
+                    <ul class="submenu">
+                        <li><a href="#">Offener Haushalt</a></li>
+                        <li><a href="#">Wahlergebnisportal</a></li>
+                        <li><a href="#">Energieverbrauchsdaten</a></li>
+                    </ul>
+                </li>
+                -->
+                <li {% if base_dir[1] == 'about' %} class="current" {% endif %}><a href="/about">Das Projekt</a></li>
+                <li {% if base_dir[1] == 'tools-formate-skills' %} class="current" {% endif %}><a href="/tools-formate-skills">Tools, Formate, Skills</a></li>
+                <li {% if base_dir[1] == 'leitfaden' %} class="current" {% endif %}><a href="/leitfaden">Leitfaden Download</a></li>
+
+            </div>
+        </ul>
+        <div class="nav-toggle"><span></span></div>
+    </div>
+</header>
