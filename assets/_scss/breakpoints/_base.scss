@@ -694,15 +694,12 @@ ACCORDION
       height: auto;
     }
     .accordion-header{
-
-      &:after {
-        @include sprite(accordion-opened);
-        content: '';
-        float: left;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+      .accordion-toggle{
+        span{
+          &:after{
+            transform: rotate(90deg);
+          }
+        }
       }
     }
   }
@@ -716,14 +713,36 @@ ACCORDION
     text-align: left;
     position: relative;
 
-    &:after {
-      @include sprite(accordion-closed);
-      content: '';
-      float: left;
-      position: absolute;
-      right: 10px;
-      top: 50%;
+    .accordion-toggle{
+      position:absolute;
+      right:20px;
+      width: 30px;
+      height: 30px;
+      top:50%;
       transform: translateY(-50%);
+
+      span{
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        background-color: $third-color;
+        top: 14px;
+        left:0;
+
+        &:after{
+
+          @include transition(transform .25s ease-in-out);
+          transform: rotate(0deg);
+          content:'';
+          height: 30px;
+          width: 2px;
+          position: absolute;
+          background-color: $third-color;
+          top:-14px;
+          left:14px;
+        }
+
+      }
     }
 
     padding: 20px 0;
