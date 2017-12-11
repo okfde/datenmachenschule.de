@@ -65,6 +65,10 @@ LAYOUT & GRID STYLES
     height: 100vh;
   }
 
+  &.tool-teaser{
+    height: 70vh;
+  }
+
   &.fullheight.fit-to-mobile{
     min-height: 100%;
     margin-bottom: 50px;
@@ -126,6 +130,15 @@ read more
     color:white;
     display: inline-block;
     font-size: 1.25em;
+
+    @include transition(transform .1s ease-in-out);
+    transform: scale(1);
+
+    &:hover{
+      color:white;
+      transform: scale(0.95);
+    }
+
   }
 
 }

@@ -85,7 +85,9 @@
 
                     if(!$acc.hasClass('open')){
 
+
                         //close open ones first
+                        /*
                         $accordions.each(function(){
                             if($(this).hasClass('open')){
                                 //hard close this
@@ -101,6 +103,7 @@
                                 TweenLite.to(window, 0.5, {scrollTo:{y:'#'+$acc.attr('id'), offsetY:$header.height()*2} });
                             }
                         }
+                        */
 
                         //now open it
                         TweenLite.set($content, {height:"auto"});
