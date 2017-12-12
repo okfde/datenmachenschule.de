@@ -16,6 +16,8 @@ permalink: /tools/offener-haushalt/
             <p>OffenerHaushalt ist eine Online-Applikation, die mit dem Ziel entwickelt wurde, dies zu ändern indem Haushaltsdaten zugänglich und verständlich gemacht werden. Dies wird erreicht, indem die einzelnen Einnahmen- und Ausgabenfelder anteilig und proportional zueinander grafisch dargestellt werden. Die Ebenen des Haushalts können dann per Mausklick ausgewählt und angesehen werden.</p>
             <p>Das Tool bietet außerdem die Möglichkeit, die Haushaltsausgaben pro Kopf anzuzeigen, um die teilweise sehr hohen Beträge greifbarer zu machen. Mit den entsprechenden demographischen Informationen lassen sich die Beträge außerdem auf andere Gruppen aufschlüssen, wie z.B. Berufstätige, bestimmte Altersgruppen, oder Wahlberechtigte.</p>
 
+            <iframe src="http://beta.offenerhaushalt.de/haushalt/bund2017/embed" width="100%" height="520px" frameborder="0" style="margin:0"></iframe>
+
             <p><a href="http://beta.offenerhaushalt.de/haushalt/bund2017/">OffenerHaushalt.de</a></p>
 
             <h3>Offener Haushalt bietet eine Reihe neuer Funktionen:</h3>
