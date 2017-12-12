@@ -582,7 +582,11 @@ HERO
 /*********************
 QUOTES
 *********************/
-
+body.ie{
+  .quote{
+    color: $secondary-color;
+  }
+}
 .quote{
 
   position: relative;
@@ -813,7 +817,17 @@ FOOTER STYLES
           display: inline-block;
           color: white;
           padding: 0 5px;
+
           @include transition(background-color .2s ease-in);
+
+          &.logo-wrap{
+            padding: 0 5px 25px 0;
+          }
+
+          &.logo-row-first{
+            height: 153px;
+            display: inline-block;
+          }
 
           &:hover{
             background-color: $secondary-color;

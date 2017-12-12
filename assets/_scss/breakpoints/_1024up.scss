@@ -123,3 +123,22 @@ read more
     width: 100%;
   }
 }
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    .footer-content {
+      a {
+        &.logo-wrap {
+          padding: 0 5px 40px 0;
+          max-width: 300px;
+        }
+        &.logo-row-first{
+        }
+      }
+    }
+  }
+}

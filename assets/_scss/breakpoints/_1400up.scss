@@ -10,3 +10,22 @@ LAYOUT & GRID STYLES
     padding-top: 75px;
   }
 }
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    .footer-content {
+      a {
+        &.logo-wrap {
+          padding: 0 25px 25px 0;
+        }
+        &.logo-row-first{
+          height: 138px;
+        }
+      }
+    }
+  }
+}

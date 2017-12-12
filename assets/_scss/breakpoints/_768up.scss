@@ -194,6 +194,13 @@ FOOTER STYLES
     padding: 50px;
     .footer-content {
       margin-bottom: 0;
+      a {
+        &.logo-wrap {
+        }
+        &.logo-row-first{
+          height: 153px;
+        }
+      }
     }
   }
 }
