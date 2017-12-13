@@ -23,3 +23,19 @@ read more
     font-size: 5.25em;
   }
 }
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    .footer-content {
+      a {
+        &.logo-wrap {
+          padding: 0 45px 40px 0;
+        }
+      }
+    }
+  }
+}

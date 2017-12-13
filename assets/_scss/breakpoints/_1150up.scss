@@ -70,6 +70,22 @@ ul.main-nav{
 }
 
 /*********************
+PAGE & SECTIONS
+*********************/
+
+.page-wrap{
+  a, p, li {
+    font-size: 1.4rem;
+  }
+  blockquote{
+    font-size: 2.3rem;
+  }
+  p {
+    line-height: 1.6em;
+  }
+}
+
+/*********************
 LAYOUT & GRID STYLES
 *********************/
 

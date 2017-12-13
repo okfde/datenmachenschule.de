@@ -5,3 +5,21 @@ QUOTES
 .quote {
   font-size: 2.25em;
 }
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+    .footer-content {
+      a {
+        &.logo-wrap {
+        }
+        &.logo-row-first{
+          height: 182px;
+        }
+      }
+    }
+  }
+}
