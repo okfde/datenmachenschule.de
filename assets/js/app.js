@@ -55,13 +55,67 @@ app.controller('MainCtrl', function ($scope, dataService) {
 			},
 			axisY: {
 				showGrid: false
+			},
+			plugins: [
+				Chartist.plugins.ctBarLabels({
+					position: {
+						x: function (data) {
+							return data.x2 + 30
+						}
+					},
+					labelOffset: {
+						y: 7
+					},
+					labelInterpolationFnc: function (text) {
+						if ($scope.category == "Wasser")
+							return text + ' m³';
+						else
+							return text + ' mWh'
+					}
+				})
+			]
+		},
+		events: {
+			draw: function (data) {
+				console.log('draw');
+				if (data.type === 'bar') {
+					console.log(data)
+					if (data.seriesIndex == 0) {
+						data.element.animate({
+							x2: {
+								begin: 0,
+								dur: 500,
+								from: data.chartRect.x2,
+								to: data.x2
+							}
+						}, false);
+					}
+
+					if (data.seriesIndex == 1) {
+						data.element.animate({
+							y2: {
+								begin: 500,
+								dur: 500,
+								from: data.y1,
+								to: data.y2
+							}
+						}, false);
+					}
+				}
+			},
+			data: function(data) {
+				// console.log('created');
 			}
 		}
 	};
 
 	$scope.select_category = function(cat) {
 		$scope.category = cat;
+		$scope.old = $
 		$scope.update_data();
+	}
+
+	$scope.select_relation = function(relation) { 
 	}
 
 	$scope.update_data = function() {
@@ -80,14 +134,9 @@ app.controller('MainCtrl', function ($scope, dataService) {
 app.controller('SchoolCtrl', function ($scope, dataService) {
 	$scope.schools = [];
 	$scope.barData = [];
+	$scope.no_school = true;
 
 	$scope.chart = {
-		barData: {
-			series: [
-				[12, 9, 7]
-			],
-			labels: ["2013", "2014", "2015"]
-		},
 		type: "Bar",
 		options: {
 			fullWidth: true,
@@ -104,7 +153,16 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 				showLabel: false
 			},
 			width: '230px',
-			height: '300px'
+			height: '300px',
+			plugins: [
+				Chartist.plugins.ctBarLabels({
+					position: {
+						y: function (data) {
+							return data.y1 - 10
+						}
+					}
+				})
+			]
 		}
 	};
 
@@ -113,12 +171,13 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 	})
 
 	$scope.update_school = function(school) {
-		console.log(school);
+		$scope.no_school = false;
 		$scope.barData = school.categories.map(function(category) {
 			return {
 				series: [category.types[0].values.map(function(item) { return item.value})],
 				labels: category.types[0].values.map(function(item) { return item.year})
 			}
 		})
+		$scope.current_school = school;
 	}
 });

@@ -1,5 +1,5 @@
 .ct-series .ct-bar {
-  stroke-width: 22px;
+  stroke-width: 30px;
   stroke: #f5a623;
 }
 
@@ -16,8 +16,29 @@
   stroke: #50e3c2;
 }
 
+.ct-bar-label {
+  fill: #fff;
+  font-weight: bold;
+}
+
 .school-chart {
-  float: left
+  display: inline-block;
+
+  h2 {
+    text-align: center;
+  }
+
+  .ct-series .ct-bar {
+    stroke-width: 40px;
+  }
+
+}
+
+.ct-chart-overview {
+  .ct-bar-label {
+    fill: #000;
+    font-weight: normal;
+  }
 }
 
 .viz-container {
@@ -27,4 +48,16 @@
   h2 {
     font-weight: bold;
   }
+}
+
+.chart-school-list {
+  list-style: none;
+  li {
+    float:left;
+    margin-right: 40px;
+  }
+}
+
+.charts {
+  margin-top: 20px;
 }
