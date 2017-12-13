@@ -43,7 +43,7 @@
         $subMenuToggle = $('.has-submenu');
         $subMenuToggle.click(function(e){
             ref.toggleSubMenu($(this));
-            e.preventDefault();
+            e.stopPropagation();
         });
 
         //handle the quotes
