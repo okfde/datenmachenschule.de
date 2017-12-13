@@ -1,0 +1,45 @@
+---
+layout: default
+title: Offener Haushalt
+permalink: /tools/energieverbrauchsdaten/
+---
+
+<!-- include hero  -->
+{% assign quotes = "Energieverbrauchsdaten" | split: '|' %}
+{% include partials/hero.liquid  %}
+
+<div class="row">
+	<section class="section bg-grey col-xs-24">
+		<div class="text-wrap text-block bg-white fade-in">
+			<div class="app-container" ng-app="App" ng-controller="MainCtrl">
+				<div class="menu-container">
+					<h1>Alle Schulen im Vergleich:</h1>
+					<p>
+						<a ng-click="select_category('Wasser')">Wasser</a>
+						<a ng-click="select_category('Strom')">Strom</a>
+						<a ng-click="select_category('Heizung')">Heizung</a>
+					</p>
+					<p>
+						<a>Absolut</a>
+						<a>Pro Quadratmeter</a>
+						<a>Pro Schüler</a>
+					</p>
+				</div>
+				<h1>{{category}}</h1>
+				<div class="viz-container" ng-repeat="school in bardata">
+					<p ng-bind="school.name"></p>
+					<chartist class="ct-chart" chartist-data="school.bardata" chartist-chart-type="Bar"
+							  chartist-chart-options="chart.options"></chartist>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="row">
+	<section class="section bg-red col-xs-24">
+		<div class="text-wrap text-block bg-white fade-in">
+			<p>Toller Text zu Einzelnen schulen...</p>
+			<a class="btn-read-more" href="/tools/energieverbrauchsdaten/schulen">zu den Schulen</a>
+		</div>
+	</section>
+</div>

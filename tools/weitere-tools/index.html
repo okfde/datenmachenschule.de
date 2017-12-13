@@ -1,0 +1,154 @@
+---
+layout: default
+title: Weitere Tools & Skills
+permalink: /tools/weitere-tools/
+---
+<!-- include hero  -->
+{% assign quotes = "Tools, Formate, Skills" | split: '|' %}
+{% include partials/hero.liquid  %}
+
+<div class="row">
+    <section class="section bg-grey col-xs-24">
+        <div class="text-wrap text-block bg-white fade-in">
+            <h2>Formate</h2>
+            <p>Der Einsatz offener Daten im Unterricht ist grundsätzlich auf einem breiten Spektrum möglich. Biologielehrer, die bei Waldspaziergängen auf das Baumkataster in der Stadt verweisen, Informaktikstudenten, die Anwendungen programmieren, und Geschichtslehrer, die lokale <a href="https://www.moers.de/de/freizeit/alle-geschichtsstationen/" target="_blank">Geschichtsstationen</a> mithilfe von Kartensoftware thematisch verknüpfen - vieles ist denkbar.</p>
+            <p>Generell kann man zwischen einigen grundlegenden Möglichkeiten unterscheiden, mit offenen Daten im Unterricht zu arbeiten:</p>
+        </div>
+
+            <div class="accordions-wrap">
+                <div id="software-tools" class="accordion fade-in">
+                    {% include partials/accordion/accordion-header.liquid headline="Nutzung des bereits existierenden Angebots an softwarebasierten Tools" %}
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner text-wrap">
+                            <p>Es gibt eine Reihe etablierter Tools aus dem weiteren Open-Data Themenraum die mit wenig bis keiner technischen Vorarbeit und Erfahrung genutzt werden können. Dazu gehört kleineAnfragen.de, eine Plattform auf der kleine Anfragen der Bundesregierung eingesehen werden können, um bspw. im Politikunterricht als Recherchedatenbank genutzt werden. Die ZUM (Zentrale für Unterrichtsmedien e.V.) stellt außerdem einfach nutzbare Werkzeuge wie Blogs und Wikis zur Verfügung, die auch in Moers genutzt wurden. Zusätzliche Tools sind weiter unten aufgelistet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="datensaetze" class="accordion fade-in">
+                    {% include partials/accordion/accordion-header.liquid headline="Hinzufügen neuer Datensätze" %}
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner text-wrap">
+                            <p>Tools wie das hier vorgestellte OffenerHaushalt können Daten auf lokaler Ebene darstellen, vorausgesetzt diese wurden in die Datenbank geladen. Wie das funktioniert, ist unter <a href="http://beta.offenerhaushalt.de/hilfestellung/" target="_blank">http://beta.offenerhaushalt.de/hilfestellung/</a> erklärt. Auch Hardwareprojekte wie luftdaten.info sind hier denkbar. Mit geringem Budget kann ein Messgerät für Luftqualität in Zusammenarbeit mit den Schülern gebaut werden, dass die gesammelten Messdaten automatisch an eine globale Datenbank weitergibt, die dann auf <a href="http://luftdaten.info/" target="_blank">einer Karte sichtbar</a> sind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="neue-tools" class="accordion fade-in">
+                    {% include partials/accordion/accordion-header.liquid headline="Programmierung neuer Tools" %}
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner text-wrap">
+                            <p>Auch wenn diese Option zunächst abschreckend wirken kann, zeigt das Moerser Beispiel, dass durch die Kooperation der richtigen Akteure vieles bewegt werden kann. Denkbar sind hier z.B. Konzepte, in denen fächerübergreifend gearbeitet wird, und Informatik-Schüler im Rahmen einer Projektwoche an Anwendungen arbeiten die von Schülern in anderen Fächern erarbeitet wurden. Im Internet gibt es eine Reihe an verhältnismäßig einfach zu verwendenden Bausteinen, die an spezifische Gegebenheiten angepasst werden können, wie die <a href="https://plot.ly/javascript/" target="_blank">Plot.ly Gallerie</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="papier" class="accordion fade-in">
+                    {% include partials/accordion/accordion-header.liquid headline="Arbeit mit Datensätzen auf Papier" %}
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner text-wrap">
+                            <p>Ein Datensatz kann auch ohne Software  relevant sein: Die auf dem offenen Datenportal verfügbare <a href="https://www.offenesdatenportal.de/dataset/51f77b13-d558-4c7a-b699-9003642d97ca/resource/abab10e4-1018-4615-8b20-585d9391affe/download/sowasser.pdf" target="_blank">‘Objektliste Wasserverbrauch für das Jahr 2015’</a> enthält eine Tabellenansicht zum Wasserverbrauch öffentlicher Gebäude. Diese könnte genutzt werden, um den Verbrauch bestimmter Gebäude über die dargestellten Jahre (2013, 2014, 2015) zu vergleichen; Veränderungen der Wasserkosten zwischen den abgerechneten Jahren zu berechnen; Diskussionen über Energiesparmaßnahmen anzuregen; oder Wasserverbrauchsdaten zwischen Objektgruppen zu vergleichen (bspw. Jugendeinrichtungen vs. Sportstätten).</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        <div class="text-wrap text-block bg-white fade-in">
+
+            <h2>Tools & Kompetenzen</h2>
+            <p>Mit der Arbeit und Verarbeitung offener Daten lassen sich eine Vielzahl an Einsatzmöglichkeiten finden und Kompetenzen aufbauen, die in unserer zunehmend digitalisierten Welt ein weites Anwendungsfeld finden.</p>
+
+        </div>
+
+        <div class="accordions-wrap" >
+            <div id="visualize" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="Daten visualisieren" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <p>Daten können mit einer reihe von unterschiedlichen digitalen Werkzeugen visualisiert werden, von <a href="https://products.office.com/en-us/excel" target="_blank">Excel</a> bis <a href="https://www.r-project.org/" target="_blank">R</a>. <a href="http://app.rawgraphs.io" target="_blank">RAW</a> und <a href="https://www.datawrapper.de/" target="_blank">Datawrapper</a> sind niedrigschwellige Tools, die in wenigen Schritten vom Datensatz bis zur Visualisierung führen können. Auch ohne Datensätze sind hier mit Beispieldatensätzen erste Schritte möglich. <a href="http://datamatic.io/" target="_blank">Datamatic</a> und <a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> bieten ebenfalls die Möglichkeit simpler Visualisierungen und ist kostenfrei verfügbar, benötigen allerdings einen Google Account.</p>
+                        <p>Dieser <a href="https://lisacharlotterost.github.io/2016/05/17/one-chart-tools/" target="_blank">Artikel (Englisch)</a> bietet einen guten Überblick über weitere verfügbare Tools.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="frag-den-staat" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="Behördliche Informationen anfragen mit FragDenStaat.de" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <p>Jede Person hat das Recht auf Informationen. Mit der Online-Plattform für Informationsfreiheit FragDenStaat kann jede Person Anfragen an Behörden stellen. Da alle angefragten Informationen öffentlich einsehbar sind, könnte diese Anwendung beispielsweise als Recherchewerkzeug im Politikunterricht, als Informationsgrundlage für Aufsätze und Referate, oder zur Illustration der Wahrnehmung zivilgesellschaftlicher Rechte dienen.</p>
+                        <p><a href="https://fragdenstaat.de/" target="_blank">https://fragdenstaat.de/</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kleine-anfrage" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="Kleine Anfragen einsehen und analysieren mit kleineAnfragen.de" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <p>Kleine Anfragen sind offizielle Fragen an die Regierung von Abgeordneten der Landtage und des Bundestags. Die jeweiligen Ministerien sind verpflichtet darauf schriftlich zu antworten und das Ergebnis für die Öffentlichkeit zugänglich zu machen.<br/>
+                            <a href="https://kleineanfragen.de/" target="_blank">kleineAnfragen.de</a> sammelt die Anfragen und Antworten aus den einzelnen Parlamentsdokumentationen ein, extrahiert die Daten von Personen, Parteien und Ministerien und stellt sie dann unter einer einheitlichen Oberfläche zur Verfügung. Somit bietet sich die Möglichkeit, sämtliche Anfragen mühelos nach Schlüsselwörtern, Parlamenten oder Dokumententypen zu filtern und zu durchsuchen. Eine weitere Möglichkeit besteht darin, neue Anfragen zu abonnieren und sich Benachrichtigungen senden zu lassen, falls Anfragen mit (einem oder mehreren) selbstgewählten Suchbegriffen erscheinen.</p>
+                        <p>Dieses Tool bietet Ansatzmöglichkeiten, Parteiprogramme im Unterricht zu analysieren und diskutieren, bestimmte Themenbereiche wie z.B. Umwelt- oder Sozialpolitik zu erforschen, und dient der Entwicklung eines generellen Verständnisses politischer Prozesse.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="Politik bei Uns" %}
+                <div id="politik" class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <p>
+                            Das offene Ratsinformationssystem „Politik Bei Uns“ stellt Informationen und Vorgänge aus Rat und Verwaltung nutzerfreundlich dar, damit Bürgerinnen und Bürger politische Entscheidungen nachvollziehen und so frühzeitig mitbestimmen können. Es greift aktuelle Entwicklungen auf (mobiles Web, Big Data, offene Schnittstellen, OpenData, eGoverment, OpenSource, Datenjournalismus und hyperlokale / personifizierte Informationssysteme). Es stellt als eine Art Datenmarktplatz Rats- und Verwaltungsdaten Drittentwicklern zur Verfügung, so dass sie ohne großen Aufwand weitere Applikationen bauen können. Neben der Politik, der Zivilgesellschaft und den Journalisten profitiert auch die Wissenschaft von strukturierten und somit analysierbaren Daten.
+                        </p>
+                        <p><a href="https://politik-bei-uns.de/" target="_blank">https://politik-bei-uns.de/</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sehr-gutachten" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="sehrGutachten" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <p>
+                            Nachdem der Bundestag entschieden hat, die Gutachten seines Wissenschaftlichen Dienstes online zu veröffentlichen (<a href="http://blog.fragdenstaat.de/2016/fragdenbundestags-erfolg/" target="_blank">mehr dazu hier</a>), hat er Ende Februar 2016 erste Arbeiten auf seine Webseite gestellt. Die Dokumente sind allerdings nicht aufbereitet - die Aufstellung ist unübersichtlich und nicht durchsuchbar. Deswegen gibt es sehrgutachten: Auf dieser Seite stellen wir die Gutachten strukturiert dar und machen sie auch im Volltext durchsuchbar. Damit ergeben sich verschiedene Möglichkeiten: Die Gutachten stehen für wissenschaftliche Analyse bereit, NutzerInnen können sich per Feed über hochgeladene Gutachten informieren und für EntwicklerInnen gibt es Daten über die Gutachten im JSON-Format. Der Einsatz im Unterricht gestaltet sich hierbei ähnlich wie bei kleineAnfragen.de.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="edulabs" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="edulabs" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <!-- an image -->
+                        {% include partials/content/content-image.liquid src="/assets/img/static/edulabs-Project.jpg" caption="" %}
+                        <p>
+                            <a href="https://www.edulabs.de/" target="_blank">Edulabs</a> sind lokale Gruppen aus Menschen, die ihre didaktischen, technischen und gestalterischen Fähigkeiten einsetzen, um zusammen nachnutzbare Bildungsmaterialien zu entwickeln. Ein Schwerpunkt liegt dabei auf dem neuen und nachhaltigen Einsatz digital gestützter Methoden. In drei Bundesländern organisiert das Projekt regelmäßige Treffen von interdisziplinären Teams, in denen innovative Unterrichtsreihen und Methoden entwickelt werden. Die Unterrichtsmaterialien lassen sich nach Kompetenzen und Unterrichtsfächern sortieren um im Unterricht eingesetzt zu werden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ptf" class="accordion fade-in">
+                {% include partials/accordion/accordion-header.liquid headline="Prototype Fund" %}
+                <div class="accordion-content">
+                    <div class="accordion-content-inner text-wrap">
+                        <!-- an image -->
+                        {% include partials/content/content-image.liquid src="/assets/img/static/Prototypefund-Project.jpg" caption="" %}
+                        <p>
+                            Für ambitionierte Projekte, die über die Kapazitäten der von Schulen bereitgestellten Strukturen hinauswachsen, bietet sich der Prototype an. Der <a href="htpps://prototypefund.de" target="_blank">Prototype Fund</a> unterstützt Softwareentwicklerinnen, Hackerinnen und Kreative dabei, ihre Ideen umzusetzen. Software-Projekte werden mit jeweils bis zu 47.500€ gefördert, dazu gibt es Coaching von Mentor*innen und Austausch mit einem spannenden Netzwerk. Mit dem Prototype Fund möchten wir gesellschaftlich relevante Software-Projekte unterstützen und die Open-Source-Community in Deutschland stärken. Der Prototype Fund ist das erste öffentliche Förderprogramm für gemeinnützige Software-Projekte in den Bereichen Civic Tech, Data Literacy und Datensicherheit und läuft von 2016 bis 2021.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+</div>
+<!-- include leitfaden section -->
+{% include sections/leitfaden.liquid %}
+
+
+

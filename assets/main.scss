@@ -29,6 +29,12 @@ $baseurl: "{{ site.baseurl }}";
 // the grid - we use a bootstrap with 24 cols
 @import "partials/bootstrap-grid24";
 
+// chartist styling
+@import "partials/chartist";
+
+// chart styling
+@import "partials/charts";
+
 // modules
 @import "modules/nav-toggle";
 
