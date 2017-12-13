@@ -193,12 +193,16 @@ FOOTER STYLES
   .footer-inner {
     padding: 50px;
     .footer-content {
-      margin-bottom: 0;
+      margin-bottom: 50px;
       a {
-        &.logo-wrap {
-        }
-        &.logo-row-first{
-          height: 153px;
+        &.logo{
+          width: 80%;
+
+          &.logo-adolfinum, &.logo-codefor{
+            width: 45%;
+          }
+
+
         }
       }
     }
