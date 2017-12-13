@@ -7,3 +7,24 @@
   font-size: 17px;
   color: black;
 }
+
+.ct-chart-blue .ct-bar {
+  stroke: #4a90e2;
+}
+
+.ct-chart-green .ct-bar {
+  stroke: #50e3c2;
+}
+
+.school-chart {
+  float: left
+}
+
+.viz-container {
+  width: 30em;
+  max-width: 100%;
+
+  h2 {
+    font-weight: bold;
+  }
+}

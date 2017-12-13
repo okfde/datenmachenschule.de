@@ -29,11 +29,8 @@ app.controller('MainCtrl', function ($scope, dataService) {
 	$scope.data = {};
 
 	$scope.category = "Wasser";
-	
-	console.log(dataService);
 
 	dataService.get(function(err, data) {
-		console.log(data);
 		$scope.data = data;
 		$scope.update_data();
 	});
@@ -76,7 +73,6 @@ app.controller('MainCtrl', function ($scope, dataService) {
 			elem.bardata = bardata;
 			return elem;
 		});
-		console.log($scope.bardata);
 	}
 
 });
