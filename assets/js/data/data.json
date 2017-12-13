@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Grafschafter Gymnasium",
+    "size": 1000,
+    "students": 500,
+    "categories": [
+      {
+        "name": "Wasser",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 865
+              },
+              {
+                "year": "2014",
+                "value": 1569
+              },
+              {
+                "year": "2015",
+                "value": 1552
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Strom",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 91
+              },
+              {
+                "year": "2014",
+                "value": 83
+              },
+              {
+                "year": "2015",
+                "value": 94
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heizung",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 401
+              },
+              {
+                "year": "2014",
+                "value": 309
+              },
+              {
+                "year": "2015",
+                "value": 335
+              }
+            ]
+          },
+          {
+            "name": "Witterungsbereinigt",
+            "values": [
+              {
+                "year": "2013",
+                "value": 369
+              },
+              {
+                "year": "2014",
+                "value": 355
+              },
+              {
+                "year": "2015",
+                "value": 360
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gymnasium Adolfinum",
+    "size": 1000,
+    "students": 500,
+    "categories": [
+      {
+        "name": "Wasser",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 3138
+              },
+              {
+                "year": "2014",
+                "value": 2557
+              },
+              {
+                "year": "2015",
+                "value": 4649
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Strom",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 329
+              },
+              {
+                "year": "2014",
+                "value": 305
+              },
+              {
+                "year": "2015",
+                "value": 302
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heizung",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 1188
+              },
+              {
+                "year": "2014",
+                "value": 739
+              },
+              {
+                "year": "2015",
+                "value": 687
+              }
+            ]
+          },
+          {
+            "name": "Witterungsbereinigt",
+            "values": [
+              {
+                "year": "2013",
+                "value": 1093
+              },
+              {
+                "year": "2014",
+                "value": 848
+              },
+              {
+                "year": "2015",
+                "value": 736
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gymnasium Filder Benden",
+    "size": 1000,
+    "students": 500,
+    "categories": [
+      {
+        "name": "Wasser",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 1968
+              },
+              {
+                "year": "2014",
+                "value": 1926
+              },
+              {
+                "year": "2015",
+                "value": 1777
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Strom",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 190
+              },
+              {
+                "year": "2014",
+                "value": 168
+              },
+              {
+                "year": "2015",
+                "value": 174
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heizung",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 1074
+              },
+              {
+                "year": "2014",
+                "value": 765
+              },
+              {
+                "year": "2015",
+                "value": 900
+              }
+            ]
+          },
+          {
+            "name": "Witterungsbereinigt",
+            "values": [
+              {
+                "year": "2013",
+                "value": 988
+              },
+              {
+                "year": "2014",
+                "value": 879
+              },
+              {
+                "year": "2015",
+                "value": 965
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gymnasium Rheinkamp",
+    "size": 1000,
+    "students": 500,
+    "categories": [
+      {
+        "name": "Wasser",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 1840
+              },
+              {
+                "year": "2014",
+                "value": 2146
+              },
+              {
+                "year": "2015",
+                "value": 2367
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Strom",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 180
+              },
+              {
+                "year": "2014",
+                "value": 170
+              },
+              {
+                "year": "2015",
+                "value": 208
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heizung",
+        "types": [
+          {
+            "name": "Absolut",
+            "values": [
+              {
+                "year": "2013",
+                "value": 425
+              },
+              {
+                "year": "2014",
+                "value": 378
+              },
+              {
+                "year": "2015",
+                "value": 329
+              }
+            ]
+          },
+          {
+            "name": "Witterungsbereinigt",
+            "values": [
+              {
+                "year": "2013",
+                "value": 391
+              },
+              {
+                "year": "2014",
+                "value": 433
+              },
+              {
+                "year": "2015",
+                "value": 420
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

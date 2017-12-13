@@ -1,0 +1,39 @@
+---
+layout: default
+title: Offener Haushalt
+permalink: /tools/energieverbrauchsdaten/schulen
+---
+{% assign quotes = "Schulen in der Einzelansicht" | split: '|' %}
+{% include partials/hero.liquid  %}
+<div class="row">
+	<section class="section bg-grey col-xs-24">
+		<div class="text-wrap text-block bg-white fade-in">
+			<div class="app-container" ng-app="App" ng-controller="SchoolCtrl">
+				<h3>Schule</h3>
+				<ui-select ng-model="ctrl.school" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Choose a country"
+						   on-select="update_school($select.selected)">
+					<ui-select-match placeholder="Wähle eine Schule...">{{$select.selected.name}}</ui-select-match>
+					<ui-select-choices repeat="school in schools | filter: $select.search">
+						<span ng-bind="school.name | highlight: $select.search"></span>
+					</ui-select-choices>
+				</ui-select>
+
+				<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
+						  chartist-chart-options="chart.options"></chartist>
+				<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
+						  chartist-chart-options="chart.options"></chartist>
+				<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
+						  chartist-chart-options="chart.options"></chartist>
+				<h2 ng-bind="test"></h2>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="row">
+	<section class="section bg-red col-xs-24">
+		<div class="text-wrap text-block bg-white fade-in">
+			<p>Toller Text zu Einzelnen schulen...</p>
+			<a class="btn-read-more" href="/tools/energieverbrauchsdaten/schulen">zu den Schulen</a>
+		</div>
+	</section>
+</div>
