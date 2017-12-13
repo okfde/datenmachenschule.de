@@ -5,6 +5,8 @@ permalink: /tools/energieverbrauchsdaten/schulen
 ---
 {% assign quotes = "Schulen in der Einzelansicht" | split: '|' %}
 {% include partials/hero.liquid  %}
+
+{% raw %}
 <div class="row">
 	<section class="section bg-grey col-xs-24">
 		<div class="text-wrap text-block bg-white fade-in">
@@ -17,23 +19,27 @@ permalink: /tools/energieverbrauchsdaten/schulen
 						<span ng-bind="school.name | highlight: $select.search"></span>
 					</ui-select-choices>
 				</ui-select>
+				<div class="school-chart">
+					<h1>Wasser</h1>
+					<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
+							  chartist-chart-options="chart.options"></chartist>
+				</div>
+				<div class="school-chart">
+					<h1>Strom</h1>
+					<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
+							  chartist-chart-options="chart.options"></chartist>
+				</div>
 
-				<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
-						  chartist-chart-options="chart.options"></chartist>
-				<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
-						  chartist-chart-options="chart.options"></chartist>
-				<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
-						  chartist-chart-options="chart.options"></chartist>
+				<div class="school-chart">
+					<h1>Energie</h1>
+					<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
+							  chartist-chart-options="chart.options"></chartist>
+				</div>
+
 				<h2 ng-bind="test"></h2>
 			</div>
 		</div>
 	</section>
 </div>
-<div class="row">
-	<section class="section bg-red col-xs-24">
-		<div class="text-wrap text-block bg-white fade-in">
-			<p>Toller Text zu Einzelnen schulen...</p>
-			<a class="btn-read-more" href="/tools/energieverbrauchsdaten/schulen">zu den Schulen</a>
-		</div>
-	</section>
-</div>
+
+{% endraw %}
