@@ -10,33 +10,46 @@ permalink: /tools/energieverbrauchsdaten/schulen
 <div class="row">
 	<section class="section bg-grey col-xs-24">
 		<div class="text-wrap text-block bg-white fade-in">
+			<p>
+				SomeIntro Text ...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi blanditiis cum dicta dolorum expedita hic
+				labore minima modi molestias nam nemo officia quia quis quod, suscipit tempora? Accusamus culpa deleniti doloremque
+				eligendi fugiat molestiae quos voluptate. A beatae corporis culpa dignissimos dolore dolores et eum excepturi natus
+				necessitatibus, obcaecati quisquam repudiandae saepe. Alias, aspernatur assumenda corporis deserunt in incidunt, maxime
+				minima molestiae nostrum odit officia quo quos saepe vero voluptas! Ad dolore doloremque eligendi id voluptatibus! Ad
+				assumenda autem blanditiis dicta dolorum enim eos excepturi, facere fugit harum incidunt iste molestiae nobis
+				perspiciatis quam quibusdam quos sit suscipit, voluptatem.
+			</p>
 			<div class="app-container" ng-app="App" ng-controller="SchoolCtrl">
-				<h3>Schule</h3>
-				<ui-select ng-model="ctrl.school" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Choose a country"
+				<h3>Wähle eine Schule</h3>
+				<ui-select ng-model="ctrl.school" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Schule wählen"
 						   on-select="update_school($select.selected)">
 					<ui-select-match placeholder="Wähle eine Schule...">{{$select.selected.name}}</ui-select-match>
 					<ui-select-choices repeat="school in schools | filter: $select.search">
-						<span ng-bind="school.name | highlight: $select.search"></span>
+						<span ng-bind-html="school.name | highlight: $select.search"></span>
 					</ui-select-choices>
 				</ui-select>
-				<div class="school-chart">
-					<h1>Wasser</h1>
-					<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
-							  chartist-chart-options="chart.options"></chartist>
-				</div>
-				<div class="school-chart">
-					<h1>Strom</h1>
-					<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
-							  chartist-chart-options="chart.options"></chartist>
-				</div>
+				<div class="charts" ng-hide="no_school">
+					<div class="school-chart">
+						<h1>Wasser</h1>
+						<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
+								  chartist-chart-options="chart.options"></chartist>
+						<p class="centered">(in m³)</p>
+					</div>
+					<div class="school-chart">
+						<h1>Strom</h1>
+						<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
+								  chartist-chart-options="chart.options"></chartist>
+						<p class="centered">(in MWh)</p>
+					</div>
 
-				<div class="school-chart">
-					<h1>Energie</h1>
-					<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
-							  chartist-chart-options="chart.options"></chartist>
-				</div>
+					<div class="school-chart">
+						<h1>Heizung</h1>
+						<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
+								  chartist-chart-options="chart.options"></chartist>
+						<p class="centered">(in MWh)</p>
+					</div>
 
-				<h2 ng-bind="test"></h2>
+				</div>
 			</div>
 		</div>
 	</section>

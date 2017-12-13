@@ -16,8 +16,22 @@
   stroke: #50e3c2;
 }
 
+.ct-bar-label {
+  fill: #fff;
+  font-weight: bold;
+}
+
 .school-chart {
-  float: left
+  display: inline-block;
+
+  h1 {
+    text-align: center;
+  }
+
+  .ct-series .ct-bar {
+    stroke-width: 40px;
+  }
+
 }
 
 .viz-container {

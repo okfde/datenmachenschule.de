@@ -35,8 +35,12 @@ $baseurl: "{{ site.baseurl }}";
 // chart styling
 @import "partials/charts";
 
+@import "partials/app";
+
 // modules
 @import "modules/nav-toggle";
+@import "modules/select2";
+@import "modules/selectize";
 
 //spritesheet
 @import "../svg-build/sass/style";
@@ -196,4 +200,9 @@ be set to display none.
   // styles in print.scss
   @import "breakpoints/print";
 
+}
+
+//Dirty fix
+#focusser-0 {
+  display: none;
 }

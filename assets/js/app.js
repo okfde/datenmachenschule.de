@@ -80,14 +80,9 @@ app.controller('MainCtrl', function ($scope, dataService) {
 app.controller('SchoolCtrl', function ($scope, dataService) {
 	$scope.schools = [];
 	$scope.barData = [];
+	$scope.no_school = true;
 
 	$scope.chart = {
-		barData: {
-			series: [
-				[12, 9, 7]
-			],
-			labels: ["2013", "2014", "2015"]
-		},
 		type: "Bar",
 		options: {
 			fullWidth: true,
@@ -104,7 +99,16 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 				showLabel: false
 			},
 			width: '230px',
-			height: '300px'
+			height: '300px',
+			plugins: [
+				Chartist.plugins.ctBarLabels({
+					position: {
+						y: function (data) {
+							return data.y1 - 10
+						}
+					}
+				})
+			]
 		}
 	};
 
@@ -113,7 +117,7 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 	})
 
 	$scope.update_school = function(school) {
-		console.log(school);
+		$scope.no_school = false;
 		$scope.barData = school.categories.map(function(category) {
 			return {
 				series: [category.types[0].values.map(function(item) { return item.value})],
