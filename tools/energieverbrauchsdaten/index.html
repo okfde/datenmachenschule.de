@@ -28,8 +28,8 @@ permalink: /tools/energieverbrauchsdaten/
 				<h1>{{category}}</h1>
 				<div class="viz-container" ng-repeat="school in bardata">
 					<h2 ng-bind="school.name"></h2>
-					<chartist class="ct-chart" chartist-data="school.bardata" chartist-chart-type="Bar"
-							  chartist-chart-options="chart.options"></chartist>
+					<chartist class="ct-chart ct-chart-overview" chartist-data="school.bardata" chartist-chart-type="Bar"
+							  chartist-chart-options="chart.options" chartist-events="chart.events"></chartist>
 				</div>
 			</div>
 		</div>

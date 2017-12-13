@@ -21,29 +21,33 @@ permalink: /tools/energieverbrauchsdaten/schulen
 			</p>
 			<div class="app-container" ng-app="App" ng-controller="SchoolCtrl">
 				<h3>Wähle eine Schule</h3>
-				<ui-select ng-model="ctrl.school" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Schule wählen"
-						   on-select="update_school($select.selected)">
-					<ui-select-match placeholder="Wähle eine Schule...">{{$select.selected.name}}</ui-select-match>
-					<ui-select-choices repeat="school in schools | filter: $select.search">
-						<span ng-bind-html="school.name | highlight: $select.search"></span>
-					</ui-select-choices>
-				</ui-select>
+				<!--<ui-select ng-model="ctrl.school" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Schule wählen"-->
+						   <!--on-select="update_school($select.selected)">-->
+					<!--<ui-select-match placeholder="Wähle eine Schule...">{{$select.selected.name}}</ui-select-match>-->
+					<!--<ui-select-choices repeat="school in schools | filter: $select.search">-->
+						<!--<span ng-bind-html="school.name | highlight: $select.search"></span>-->
+					<!--</ui-select-choices>-->
+				<!--</ui-select>-->
+				<ul class="chart-school-list">
+					<li ng-repeat="school in schools" class="no"><a ng-click="update_school(school)">{{school.name}}</a></li>
+				</ul>
 				<div class="charts" ng-hide="no_school">
+					<h1>{{current_school.name}}</h1>
 					<div class="school-chart">
-						<h1>Wasser</h1>
+						<h2>Wasser</h2>
 						<chartist class="ct-chart ct-chart-blue" chartist-data="barData[0]" chartist-chart-type="Bar"
 								  chartist-chart-options="chart.options"></chartist>
 						<p class="centered">(in m³)</p>
 					</div>
 					<div class="school-chart">
-						<h1>Strom</h1>
+						<h2>Strom</h2>
 						<chartist class="ct-chart ct-chart-green" chartist-data="barData[1]" chartist-chart-type="Bar"
 								  chartist-chart-options="chart.options"></chartist>
 						<p class="centered">(in MWh)</p>
 					</div>
 
 					<div class="school-chart">
-						<h1>Heizung</h1>
+						<h2>Heizung</h2>
 						<chartist class="ct-chart" chartist-data="barData[2]" chartist-chart-type="Bar"
 								  chartist-chart-options="chart.options"></chartist>
 						<p class="centered">(in MWh)</p>

@@ -1,5 +1,5 @@
 .ct-series .ct-bar {
-  stroke-width: 22px;
+  stroke-width: 30px;
   stroke: #f5a623;
 }
 
@@ -24,7 +24,7 @@
 .school-chart {
   display: inline-block;
 
-  h1 {
+  h2 {
     text-align: center;
   }
 
@@ -34,6 +34,13 @@
 
 }
 
+.ct-chart-overview {
+  .ct-bar-label {
+    fill: #000;
+    font-weight: normal;
+  }
+}
+
 .viz-container {
   width: 30em;
   max-width: 100%;
@@ -41,4 +48,16 @@
   h2 {
     font-weight: bold;
   }
+}
+
+.chart-school-list {
+  list-style: none;
+  li {
+    float:left;
+    margin-right: 40px;
+  }
+}
+
+.charts {
+  margin-top: 20px;
 }
