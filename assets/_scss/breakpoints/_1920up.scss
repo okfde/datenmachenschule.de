@@ -25,13 +25,28 @@ FOOTER STYLES
 
 .footer {
   .footer-inner {
+
+    padding: 75px;
+
     .footer-content {
+
+      h3{
+
+      }
+
       a {
-        &.logo-wrap {
-          padding: 0 25px 25px 0;
-        }
-        &.logo-row-first{
-          height: 150px;
+        &.logo{
+          width: 35%;
+
+          &.logo-adolfinum, &.logo-codefor{
+            width: 18%;
+          }
+
+          &.logo-nrw{
+            width: 50%;
+          }
+
+
         }
       }
     }

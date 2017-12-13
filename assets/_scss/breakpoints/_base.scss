@@ -397,6 +397,7 @@ HEADER STYLES
     margin: 0 auto;
     height: 100%;
     position: relative;
+    background-color: white;
 
     .logo{
 
@@ -813,6 +814,7 @@ FOOTER STYLES
         }
 
         color: white;
+
         a{
           display: inline-block;
           color: white;
@@ -820,27 +822,36 @@ FOOTER STYLES
 
           @include transition(background-color .2s ease-in);
 
-          &.logo-wrap{
-            padding: 0 5px 25px 0;
-          }
-
-          &.logo-row-first{
-            height: 153px;
-            display: inline-block;
-          }
-
           &:hover{
             background-color: $secondary-color;
           }
-        }
 
-        &.logo{
-          a{
+          &.logo{
+
+            padding: 0;
+            width: 80%;
+
+            &.logo-adolfinum, &.logo-codefor{
+              width: 48%;
+            }
+
+            img{
+              width: 100%;
+              height: auto;
+            }
+
+            &:last-of-type{
+              margin-right: 0;
+            }
+
             &:hover{
               background-color: transparent;
             }
           }
+
         }
+
+
 
       }
 

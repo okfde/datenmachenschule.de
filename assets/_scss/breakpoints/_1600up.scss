@@ -3,3 +3,37 @@
     height: 90vh;
   }
 }
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  .footer-inner {
+
+    padding: 75px;
+
+    .footer-content {
+
+      h3{
+
+      }
+
+      a {
+        &.logo{
+          width: 40%;
+
+          &.logo-adolfinum, &.logo-codefor{
+            width: 22%;
+          }
+
+          &.logo-nrw{
+            width: 60%;
+          }
+
+
+        }
+      }
+    }
+  }
+}

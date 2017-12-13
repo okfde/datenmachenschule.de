@@ -83,15 +83,6 @@ ul.main-nav {
   }
 }
 
-/*********************
-FOOTER STYLES
-*********************/
-
-.footer {
-  .footer-inner {
-    padding: 100px;
-  }
-}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -138,13 +129,28 @@ FOOTER STYLES
 
 .footer {
   .footer-inner {
+
+    padding: 75px;
+
     .footer-content {
+
+      h3{
+        font-size: 1.5em;
+      }
+
       a {
-        &.logo-wrap {
-          padding: 0 5px 40px 0;
-          max-width: 300px;
-        }
-        &.logo-row-first{
+        &.logo{
+          width: 60%;
+
+          &.logo-adolfinum, &.logo-codefor{
+            width: 40%;
+          }
+
+          &.logo-nrw{
+            width: 80%;
+          }
+
+
         }
       }
     }
