@@ -544,7 +544,7 @@ HERO
 *********************/
 
 .hero{
-  height: 98vh;
+  height: 85vh;
 
   .dots{
 
@@ -582,7 +582,7 @@ HERO
 /*********************
 QUOTES
 *********************/
-body.ie{
+body.ie, body.msie{
   .quote{
     color: $secondary-color;
   }
