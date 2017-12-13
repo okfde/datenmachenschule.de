@@ -115,7 +115,7 @@ app.controller('MainCtrl', function ($scope, dataService) {
 		$scope.update_data();
 	}
 
-	$scope.select_relation = function(relation) {
+	$scope.select_relation = function(relation) { 
 	}
 
 	$scope.update_data = function() {
