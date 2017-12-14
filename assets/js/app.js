@@ -27,6 +27,7 @@ app.controller('MainCtrl', function ($scope, dataService) {
 	$scope.data = {};
 
 	$scope.category = "Wasser";
+	$scope.relation = "absolute";
 
 	dataService.get(function(err, data) {
 		$scope.data = data;
