@@ -1,15 +1,14 @@
 ---
 layout: default
-title: Wahlergebnisportal
-permalink: /tools/wahlergebnisportal/
+title: Moer Wahlen
+permalink: /tools/wahlergebnisportal
+script_include: wahlen
+
 ---
 
-<!-- include hero  -->
-{% assign quotes = "Wahlergebnisportal" | split: '|' %}
-{% include partials/hero.liquid  %}
-
 <div class="row">
-	<section class="section bg-grey col-xs-24">
-
-	</section>
+  <section class="section bg-grey col-xs-24 map-section"> 
+  <div id="app">
+  </div>
+  </section>
 </div>
