@@ -25,14 +25,13 @@ permalink: /tools/energieverbrauchsdaten/
 				<div class="menu-container">
 					<h1>Alle Schulen im Vergleich:</h1>
 					<p>
-						<a ng-click="select_category('Wasser')">Wasser</a>
-						<a ng-click="select_category('Strom')">Strom</a>
-						<a ng-click="select_category('Heizung')">Heizung</a>
+						<a ng-click="select_category('Wasser')" ng-class="{active_cat: category == 'Wasser'}">Wasser</a>
+						<a ng-click="select_category('Strom')" ng-class="{active_cat: category == 'Strom'}">Strom</a>
+						<a ng-click="select_category('Heizung')" ng-class="{active_cat: category == 'Heizung'}">Heizung</a>
 					</p>
 					<p>
 						<a>Absolut</a>
 						<a>Pro Quadratmeter</a>
-						<a>Pro Schüler</a>
 					</p>
 				</div>
 				<h1>{{category}}</h1>
