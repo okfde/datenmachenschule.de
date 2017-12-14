@@ -38,6 +38,12 @@
 
 
         <!-- js libs -->
+
+        {% if page.script_include %}
+          {% include script_{{ page.script_include  }}.liquid %}
+        {% endif %}
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/logger.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/jquery.fitvids.js"></script>
