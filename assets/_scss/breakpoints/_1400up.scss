@@ -28,17 +28,9 @@ FOOTER STYLES
 
       a {
         &.logo{
-          width: 40%;
-
-          &.logo-adolfinum, &.logo-codefor{
-            width: 25%;
+          img{
+            height: 70px;
           }
-
-          &.logo-nrw{
-            width: 60%;
-          }
-
-
         }
       }
     }

@@ -305,22 +305,24 @@ WRAPPER STYLES
           position: absolute;
           left:-7px;
           top:0;
-          color: white;
-          content: counter(counter);
+          color: $third-color;
+          content: counter(counter)".";
           counter-increment: counter;
           font-size: 1.1em;
           text-align: center;
           width: 30px;
           height: 30px;
           border-radius: 15px;
-          background-color: $third-color;
+          background-color: white;
+          border: 2px solid $third-color;
           z-index: 2;
         }
         &:after {
           content: '';
-          width: 2px;
+          width: 6px;
           height: 100%;
-          background-color: $third-color;
+          background-image: url($baseurl + '/assets/img/static/list-dot.png');
+          background-repeat: repeat-y;
           z-index: 1;
           left: 6.5px;
           position: absolute;
@@ -828,20 +830,9 @@ FOOTER STYLES
 
           &.logo{
 
-            padding: 0;
-            width: 80%;
-
-            &.logo-adolfinum, &.logo-codefor{
-              width: 48%;
-            }
-
             img{
-              width: 100%;
-              height: auto;
-            }
-
-            &:last-of-type{
-              margin-right: 0;
+              width: auto;
+              height: 78px;
             }
 
             &:hover{

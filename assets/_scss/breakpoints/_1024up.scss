@@ -20,6 +20,25 @@ PAGE & SECTIONS
   p {
     line-height: 1.6em;
   }
+
+  ol{
+
+    &.timeline{
+
+      li{
+        &:before {
+          width: 39px;
+          height: 39px;
+        }
+        &:after {
+          top:39px;
+        }
+
+      }
+    }
+
+  }
+
 }
 
 /******************************************************************
@@ -140,16 +159,6 @@ FOOTER STYLES
 
       a {
         &.logo{
-          width: 60%;
-
-          &.logo-adolfinum, &.logo-codefor{
-            width: 40%;
-          }
-
-          &.logo-nrw{
-            width: 80%;
-          }
-
 
         }
       }
