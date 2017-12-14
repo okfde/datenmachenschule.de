@@ -202,10 +202,13 @@ be set to display none.
 
 }
 
-//Dirty fix
 #focusser-0 {
   display: none;
 }
 
 #app {
+  height: 800px;
+  content: '';
+  margin-top: 90px;
+  position: relative;
 }
