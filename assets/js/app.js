@@ -115,7 +115,7 @@ app.controller('MainCtrl', function ($scope, dataService) {
 		$scope.update_data();
 	}
 
-	$scope.select_relation = function(relation) { 
+	$scope.select_relation = function(relation) {
 	}
 
 	$scope.update_data = function() {
@@ -168,7 +168,7 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 
 	dataService.get(function(err, data) {
 		$scope.schools = data;
-	})
+	});
 
 	$scope.update_school = function(school) {
 		$scope.no_school = false;
@@ -177,7 +177,7 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 				series: [category.types[0].values.map(function(item) { return item.value})],
 				labels: category.types[0].values.map(function(item) { return item.year})
 			}
-		})
+		});
 		$scope.current_school = school;
 	}
 });
