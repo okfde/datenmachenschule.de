@@ -57,9 +57,11 @@
 
                 e.preventDefault();
             });
+
+            ref.showQuote();
+
         }
 
-        ref.showQuote();
 
     };
 

@@ -19,7 +19,7 @@
         ref = this;
 
         Logger.useDefaults();
-        //Logger.setLevel(Logger.OFF);
+        Logger.setLevel(Logger.OFF);
 
         var browser = ref.getBrowser();
         $('body').addClass(browser.name.toLowerCase()).addClass('version-' + browser.version.toLowerCase());

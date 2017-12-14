@@ -476,8 +476,10 @@ ul.main-nav{
         &:after {
           @include sprite(arrow-down);
           content: '';
-          float: right;
-          margin-left: 15px;
+          float: none;
+          margin-left: 5px;
+          position: relative;
+          top: 3px;
         }
 
         &:hover{
