@@ -30,8 +30,8 @@ permalink: /tools/energieverbrauchsdaten/
 						<a ng-click="select_category('Heizung')" ng-class="{active_cat: category == 'Heizung'}">Heizung</a>
 					</p>
 					<p>
-						<a>Absolut</a>
-						<a>Pro Quadratmeter</a>
+						<a ng-click="select_relation('absolute')">Absolut</a>
+						<a ng-click="select_relation('ground')">Pro Quadratmeter</a>
 					</p>
 				</div>
 				<h1>{{category}}</h1>
