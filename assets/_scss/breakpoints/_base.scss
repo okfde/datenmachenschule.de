@@ -536,7 +536,7 @@ ul.main-nav{
           display: none;
         }
         &.current, &:hover{
-          color: $secondary-color;
+          color: $secondary-color !important;
         }
       }
     }
@@ -652,7 +652,7 @@ PAGE & SECTIONS
 
     &:hover{
       background-color: transparent;
-      color: $secondary-color;
+      color: $secondary-color !important;
     }
 
   }
