@@ -464,7 +464,7 @@ ul.main-nav{
 
     a{
       &:hover{
-        color: $secondary-color;
+        color: $secondary-color !important;
       }
     }
 
@@ -483,7 +483,7 @@ ul.main-nav{
         }
 
         &:hover{
-          color: $primary-color;
+          color: $primary-color !important;
         }
 
       }
@@ -504,7 +504,7 @@ ul.main-nav{
 
     &.current{
       a{
-        color: $secondary-color;
+        color: $secondary-color !important;
       }
     }
 
