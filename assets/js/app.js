@@ -24,11 +24,10 @@ app.factory('dataService', function($http) {
 });
 
 app.controller('MainCtrl', function ($scope, dataService) {
-	$scope.test = 'hallo knut';
-	$scope.test2 = ['hallo', 'hallo', 'knut'];
 	$scope.data = {};
 
 	$scope.category = "Wasser";
+	$scope.relation = "absolute";
 
 	dataService.get(function(err, data) {
 		$scope.data = data;
@@ -111,22 +110,30 @@ app.controller('MainCtrl', function ($scope, dataService) {
 
 	$scope.select_category = function(cat) {
 		$scope.category = cat;
-		$scope.old = $
 		$scope.update_data();
 	}
 
-	$scope.select_relation = function(relation) { 
-	}
+	$scope.select_relation = function(relation) {
+		console.log("select relation");
+		$scope.relation = relation;
+		$scope.update_data();
+	};
 
 	$scope.update_data = function() {
 		$scope.bardata = $scope.data.map(function(elem) {
 			var curr = _.filter(elem.categories, {'name': $scope.category})[0].types[0];
 			var bardata = {};
-			bardata.series = [curr.values.map(function(item) { return item.value })];
+			bardata.series = [curr.values.map(function(item) { return $scope.relation == "ground" ? (item.value / elem.size).toFixed(2) : item.value })];
 			bardata.labels = curr.values.map(function(item) { return item.year });
+
+
+
 			elem.bardata = bardata;
+			console.log(elem);
 			return elem;
 		});
+
+		console.log($scope.relation);
 	}
 
 });
@@ -168,7 +175,7 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 
 	dataService.get(function(err, data) {
 		$scope.schools = data;
-	})
+	});
 
 	$scope.update_school = function(school) {
 		$scope.no_school = false;
@@ -177,7 +184,7 @@ app.controller('SchoolCtrl', function ($scope, dataService) {
 				series: [category.types[0].values.map(function(item) { return item.value})],
 				labels: category.types[0].values.map(function(item) { return item.year})
 			}
-		})
+		});
 		$scope.current_school = school;
 	}
 });

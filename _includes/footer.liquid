@@ -38,6 +38,12 @@
 
 
         <!-- js libs -->
+
+        {% if page.script_include %}
+          {% include script_{{ page.script_include  }}.liquid %}
+        {% endif %}
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/logger.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/jquery.fitvids.js"></script>
@@ -47,7 +53,8 @@
         <script src="{{ site.baseurl }}/assets/js/vendor/greensock/easing/EasePack.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/greensock/plugins/CSSPlugin.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/greensock/plugins/ScrollToPlugin.min.js"></script>
-        <script src="{{ site.baseurl }}/assets/js/vendor/chartist.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/vendor/chartist/chartist.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/vendor/chartist/chartist-bar-labels.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/lodash.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/angular/angular.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/vendor/angular/angular-chartist.min.js"></script>
