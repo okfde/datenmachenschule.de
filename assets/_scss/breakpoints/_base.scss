@@ -148,17 +148,17 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-  color: $link-color;
+  color: $link-color !important;
   text-decoration: none;
 
   /* on hover */
   &:hover, &:focus {
-    color: $link-hover;
+    color: $link-hover !important;
   }
 
   /* on click */
   &:active {
-    color: $link-hover;
+    color: $link-hover !important;
   }
 
   /* mobile tap color */
